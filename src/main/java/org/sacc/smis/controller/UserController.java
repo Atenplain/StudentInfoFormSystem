@@ -1,5 +1,6 @@
 package org.sacc.smis.controller;
 
+import org.sacc.smis.entity.Passwords;
 import org.sacc.smis.entity.User;
 import org.sacc.smis.entity.UserRegisterParam;
 import org.sacc.smis.model.RestResult;
@@ -49,8 +50,8 @@ public class UserController {
 
     @ResponseBody
     @PostMapping("/modify")
-    public RestResult<Boolean> modify(@RequestBody String oldPassword, String newPassword, Authentication authentication){
+    public RestResult<Boolean> modify(@RequestBody Passwords passwords, Authentication authentication){
         User user = (User)authentication.getPrincipal();
-        return RestResult.success(userService.modify(user, oldPassword, newPassword));
+        return RestResult.success(userService.modify(user, passwords));
     }
 }

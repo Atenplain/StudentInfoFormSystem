@@ -1,5 +1,6 @@
 package org.sacc.smis.service.impl;
 
+import org.sacc.smis.entity.Passwords;
 import org.sacc.smis.entity.User;
 import org.sacc.smis.entity.UserRegisterParam;
 import org.sacc.smis.enums.Business;
@@ -69,9 +70,9 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    public boolean modify(User user, String oldPassword, String newPassword) {
-        if(oldPassword.equals(user.getPassword())){
-            user.setPassword(newPassword);
+    public boolean modify(User user, Passwords passwords) {
+        if(passwords.getOldPassword().equals(user.getPassword())){
+            user.setPassword(passwords.getNewPassword());
             userRepository.save(user);
             return true;
         }

@@ -1,5 +1,6 @@
 package org.sacc.smis.service;
 
+import org.sacc.smis.entity.Passwords;
 import org.sacc.smis.entity.User;
 import org.sacc.smis.entity.UserRegisterParam;
 
@@ -16,5 +17,5 @@ public interface UserService {
 
     boolean updateInfo(User user);
 
-    boolean modify(User user, String oldPassword, String newPassword);
+    boolean modify(User user, Passwords passwords);
 }
