@@ -46,4 +46,11 @@ public class UserController {
         user.setId(userInfo.getId());
         return RestResult.success(userService.updateInfo(user));
     }
+
+    @ResponseBody
+    @PostMapping("/modify")
+    public RestResult<Boolean> modify(@RequestBody String oldPassword, String newPassword, Authentication authentication){
+        User user = (User)authentication.getPrincipal();
+        return RestResult.success(userService.modify(user, oldPassword, newPassword));
+    }
 }

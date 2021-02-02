@@ -67,4 +67,14 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         userRepository.save(u);
         return true;
     }
+
+    @Override
+    public boolean modify(User user, String oldPassword, String newPassword) {
+        if(oldPassword.equals(user.getPassword())){
+            user.setPassword(newPassword);
+            userRepository.save(user);
+            return true;
+        }
+        return false;
+    }
 }
