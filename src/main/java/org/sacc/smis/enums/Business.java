@@ -9,7 +9,6 @@ import lombok.Getter;
  */
 
 @Getter
-@AllArgsConstructor
 public enum Business {
     STUDENT_ID_IS_EXIT(1000,"该学号已存在")
     ,
@@ -18,4 +17,16 @@ public enum Business {
     private final int code;
     private final String message;
 
+    Business(int code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
 }

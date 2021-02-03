@@ -1,13 +1,18 @@
 package org.sacc.smis.controller;
 
+import org.sacc.smis.entity.UpdatePasswordParam;
 import org.sacc.smis.entity.User;
+import org.sacc.smis.entity.UserLoginParam;
 import org.sacc.smis.entity.UserRegisterParam;
+import org.sacc.smis.exception.LoginException;
+import org.sacc.smis.exception.UpdatePasswordException;
 import org.sacc.smis.model.RestResult;
 import org.sacc.smis.model.UserInfo;
 import org.sacc.smis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +29,7 @@ public class UserController {
 
     @ResponseBody
     @PostMapping("/register")
-    public RestResult<Boolean> register(@RequestBody UserRegisterParam userRegisterParam){
+    public RestResult<Boolean> register( UserRegisterParam userRegisterParam){
         return RestResult.success(userService.register(userRegisterParam));
     }
 
@@ -39,7 +44,7 @@ public class UserController {
     /**
      * Authentication authentication 从session中拿到用户信息
      */
-    public RestResult<Boolean> update(@RequestBody User user, Authentication authentication){
+    public RestResult<Boolean> update( User user, Authentication authentication){
         UserInfo userInfo = (UserInfo)authentication.getPrincipal();
         user.setId(userInfo.getId());
         return RestResult.success(userService.updateInfo(user));
@@ -54,4 +59,23 @@ public class UserController {
         userInfo.setPassword("n/a");
         return RestResult.success(userInfo);
     }
+
+    /**
+     * 登录
+     * @param userLoginParam
+     * @return
+     * @throws LoginException
+     */
+    @ResponseBody
+    @PostMapping("/login")
+    public RestResult<Boolean> login(UserLoginParam userLoginParam) throws LoginException {
+        return RestResult.success(userService.login(userLoginParam));
+    }
+
+    @ResponseBody
+    @PostMapping("/updatePassword")
+    public RestResult<Boolean> updatePassword(UpdatePasswordParam updatePasswordParam) throws UpdatePasswordException {
+        return RestResult.success(userService.updatePassword(updatePasswordParam));
+    }
+
 }

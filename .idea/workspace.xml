@@ -22,21 +22,59 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0340f58f-72c0-4c68-89cb-e5047477c6cb" name="Default Changelist" comment="2-1">
+    <list default="true" id="0340f58f-72c0-4c68-89cb-e5047477c6cb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/sacc/smis/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sacc/smis/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/sacc/smis/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sacc/smis/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sacc/smis/enums/ResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sacc/smis/enums/ResultEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sacc/smis/enums/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sacc/smis/enums/UserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sacc/smis/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sacc/smis/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sacc/smis/entity/UserRegisterParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sacc/smis/entity/UserRegisterParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sacc/smis/enums/Business.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sacc/smis/enums/Business.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sacc/smis/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sacc/smis/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sacc/smis/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sacc/smis/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/sacc/smis/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/sacc/smis/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/sacc/smis/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/sacc/smis/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/sacc/smis/enums/UserRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/sacc/smis/enums/UserRole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sacc/smis/entity/UserRegisterParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/sacc/smis/entity/UserRegisterParam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sacc/smis/enums/Business.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/sacc/smis/enums/Business.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sacc/smis/enums/ResultEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/sacc/smis/enums/ResultEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sacc/smis/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/sacc/smis/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/sacc/smis/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/sacc/smis/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="smis" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="smis" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="smis" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="smis: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -59,7 +97,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1jy4Z8dMXs8tnLT79nhTkQmBiZc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -73,9 +113,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/interact" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -93,6 +136,18 @@
       <recent name="C:\Users\86153\IdeaProjects\StudentInfoFormSystem\src\main\resources" />
       <recent name="C:\Users\86153\Downloads\StudentInfoFormSystem" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -114,7 +169,35 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e3644605" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e3644605" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@489267f" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e3644605" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7f350eb9" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0340f58f-72c0-4c68-89cb-e5047477c6cb" name="Default Changelist" comment="" />
@@ -256,12 +339,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="README" />

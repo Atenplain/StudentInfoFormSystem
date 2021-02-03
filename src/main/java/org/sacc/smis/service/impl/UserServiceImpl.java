@@ -1,9 +1,15 @@
 package org.sacc.smis.service.impl;
 
+import org.sacc.smis.entity.UpdatePasswordParam;
 import org.sacc.smis.entity.User;
+import org.sacc.smis.entity.UserLoginParam;
 import org.sacc.smis.entity.UserRegisterParam;
 import org.sacc.smis.enums.Business;
+import org.sacc.smis.enums.Login;
+import org.sacc.smis.enums.UpdatePassword;
 import org.sacc.smis.exception.BusinessException;
+import org.sacc.smis.exception.LoginException;
+import org.sacc.smis.exception.UpdatePasswordException;
 import org.sacc.smis.mapper.UserRepository;
 import org.sacc.smis.model.UserInfo;
 import org.sacc.smis.service.UserService;
@@ -65,6 +71,31 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         User u = userRepository.findByPrimaryKey(user.getId());
         BeanUtils.copyProperties(user,u,GetNullPropertyNamesUtil.getNullPropertyNames(user));
         userRepository.save(u);
+        return true;
+    }
+
+    @Override
+    public boolean login(UserLoginParam userLoginParam) throws LoginException {
+        if (userLoginParam.getStudentId()==null){
+            throw new LoginException(Login.ID_IS_NULL);
+        }else if(userRepository.findByStudentId(userLoginParam.getStudentId())==null){
+            throw new LoginException(Login.ID_IS_NOT_EXIT);
+        }else if (userLoginParam.getPassword()==null){
+            throw new LoginException(Login.PASSWORD_IS_NULL);
+        }else if(!passwordEncoder.matches(userLoginParam.getPassword(),userRepository.findByStudentId(userLoginParam.getStudentId()).getPassword())){
+            throw new LoginException(Login.PASSWORD_IS_WRONG);
+        }
+        return true;
+    }
+
+    @Override
+    public boolean updatePassword(UpdatePasswordParam updatePasswordParam) throws UpdatePasswordException {
+//        if (userRepository.findByStudentId(updatePasswordParam.getStudentId())==null){
+//            throw new UpdatePasswordException(UpdatePassword.ID_IS_NOT_EXIT);
+//        }
+        User user = userRepository.findByStudentId(updatePasswordParam.getStudentId());
+        user.setPassword(passwordEncoder.encode(updatePasswordParam.getPassword()));
+        userRepository.save(user);
         return true;
     }
 }
